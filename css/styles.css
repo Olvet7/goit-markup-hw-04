@@ -408,8 +408,7 @@ h1,h2,h3,h4,h5,h6 p {
 .frt-icon {
     width: 40px;
     height: 40px;
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--primary_brand) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ftr-media-descr {
