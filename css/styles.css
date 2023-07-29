@@ -391,11 +391,13 @@ h1,h2,h3,h4,h5,h6 p {
     margin: 0 auto;
     margin-top: 48px;
     border-radius: 4px;
-    /* border-style: none;
-    border-radius: 4px; */
     border-bottom-color: var(--primary_brand);
     min-width: 169px;
     border: none;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-studio-text:hover,
@@ -475,6 +477,10 @@ h1,h2,h3,h4,h5,h6 p {
     align-items: center;
     background-color: var(--primary_brand);
     border-radius: 50%;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-media:hover,
@@ -548,6 +554,10 @@ h1,h2,h3,h4,h5,h6 p {
     margin: 0 auto;     
     border: 1px solid var(--accent);
     border-radius: 4px;
+
+    transition-property: color, background-color, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-text:hover,
@@ -574,6 +584,42 @@ h1,h2,h3,h4,h5,h6 p {
     row-gap: 48px;
 }
 
+
+/* Overlay Text */
+.wrapper {
+    overflow: hidden;
+}
+
+.overlay {
+    background-color: var(--primary_brand);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 300px;
+
+    transform: translateY(100%); 
+}
+
+.portfolio-card:hover .overlay {
+    transform: translateY(0); 
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-descr {
+color: var(--light);
+font-size: 16px;
+font-weight: 400;
+line-height: 1.5em; /* 150% */
+letter-spacing: 0.02em;
+
+padding: 40px 32px 146px 32px;
+margin: 0;
+}
+
 .portfolio-header {
     /* text-align: left; */
     margin-bottom: 8px;
@@ -585,6 +631,7 @@ h1,h2,h3,h4,h5,h6 p {
 
 .portfolio-card {
     width: calc((100% - 48px) / 3);
+    position: relative;
 }
 
 .card-container {
@@ -592,8 +639,6 @@ h1,h2,h3,h4,h5,h6 p {
     border: 1px solid var(--accent);
     border-top: none; 
 }
-
-z-index
 
 .item-list:not (:last-child)::after {
     content: '';
@@ -651,6 +696,10 @@ z-index
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition-property: color, background-color, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover {
