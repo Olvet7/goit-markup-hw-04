@@ -42,7 +42,8 @@ body {
 /* Top Page */
 
 .header {
-    border-bottom: 1px solid var(--accent)
+    border-bottom: 1px solid var(--accent);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);;
 }
 
 .header-container {
@@ -59,7 +60,29 @@ body {
     align-items: center;
 }
 
+.current {
+    position: relative;
+    color: var(--pressed-state);
+
+    transition-property: background-color; 
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: var(--pressed-state);
+    border-radius: 2px;
+    position: absolute;
+
+}
+
 .nav-list-item {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -68,6 +91,13 @@ body {
 
 .nav-link {
     padding: 24px 0; 
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
 }
 
 /* Reset */
@@ -148,6 +178,7 @@ h1,h2,h3,h4,h5,h6 p {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.02em; 
+    transition-property: ;
 }
 
 .address-contacts {
@@ -163,16 +194,17 @@ h1,h2,h3,h4,h5,h6 p {
 
 
 .hero-image {
-    background-color: var(--dark);
     padding-top: 188px;
     padding-bottom: 188px;
+    background-color: var(--dark);
+    background-position: center;
+    background-size: cover;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), 
     url(/images/people_office_1.jpg);
     background-repeat: no-repeat;
     min-width: 1440px;
     margin: 0 auto;
-    background-position: center;
-    background-size: cover;
+    min-width: 1440px;
 }
 
 /* Team */
@@ -247,6 +279,18 @@ h1,h2,h3,h4,h5,h6 p {
 
 .preferences-item {
     width: calc((100% - 72px) / 4);
+}
+
+.preferences-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
+    background-color: var(--light);
 }
 
 .ach-section {
@@ -547,4 +591,73 @@ h1,h2,h3,h4,h5,h6 p {
     padding: 32px 16px;
     border: 1px solid var(--accent);
     border-top: none; 
+}
+
+z-index
+
+.item-list:not (:last-child)::after {
+    content: '';
+    display: block;
+}
+
+/* Modal Styles */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-overlay); 
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal {
+    position: absolute;
+    width: 408px;
+    height: 584px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: var(--modal-background);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); 
+}
+.modal-icon {
+    background-color: 1px solid var(--subtle-text);
+
+}
+
+.modal-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    border: none;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-btn:hover {
+    border: none;
+}
+
+.modal-btn:focus {
+    background-color: var(--pressed-state);
+    border: none;
 }

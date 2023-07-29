@@ -16,28 +16,26 @@
     <!-- Header -->
 
     <header class="header">
-            <div class="container header-container">
-                <!-- Top Line -->
-                <nav class="nav-page">
-                    <a href="./index.html" class="logo-web link">Web<span class="logo-studio link">Studio</span>
-                    </a>
-                    <ul class="list nav-list-item">
-                        <li><a href="./index.html" target="_blank" class="body-medium-header link nav-link">Studio</a></li>
-                        <li><a href="./portfolio.html" target="_blank" class="body-medium-header link nav-link">Portfolio</a></li>
-                        <li><a href="" target="_blank" class="body-medium-header link nav-link">Contacts</a></li>
-                    </ul>
-                </nav>
+        <div class="container header-container">
+            <!-- Top Line -->
+            <nav class="nav-page">
+                <a href="./index.html" class="logo-web link">Web<span class="logo-studio link">Studio</span>
+                </a>
+                <ul class="list nav-list-item">
+                    <li><a href="./index.html" target="_blank" class="body-medium-header link nav-link current">Studio</a></li>
+                    <li><a href="./portfolio.html" target="_blank" class="body-medium-header link nav-link">Portfolio</a></li>
+                    <li><a href="" target="_blank" class="body-medium-header link nav-link">Contacts</a></li>
+                </ul>
+            </nav>
 
-                 <!-- Address -->
-                <address class="address">     
-                    <ul class="list address-contacts">
-                        <li><a href="mailto:info@devstudio.com" target="_blank" class="address link">info@devstudio.com</a></li>
-                        <li><a href="tel:+110001111111" target="_blank" class="address link">+11 (000) 111-11-11</a></li>
-                    </ul>
-                </address>
-
-            </div>
-   
+                <!-- Address -->
+            <address class="address">     
+                <ul class="list address-contacts">
+                    <li><a href="mailto:info@devstudio.com" target="_blank" class="address link">info@devstudio.com</a></li>
+                    <li><a href="tel:+110001111111" target="_blank" class="address link">+11 (000) 111-11-11</a></li>
+                </ul>
+            </address>
+        </div>
 
     </header>
 
@@ -50,7 +48,7 @@
         <section class="hero-image">
             <div class="container hero">
                 <h1 class="header-one">Effective Solutions for Your Business</h1>
-                <button type="button" class="button-studio-text">Order Service</button>
+                <button type="button" class="button-studio-text data-modal-open">Order Service</button>
             </div>
         </section>
 
@@ -61,24 +59,44 @@
                 <h2 class="visually-hidden">Hidden section heading</h2>
                 <ul class="list preferences">
                     <li class="preferences-item">
+                        <div class="preferences-icons">
+                            <svg width="64" height="64">
+                                <use href="./images/icons.svg#antenna"></use>
+                            </svg>
+                        </div>
                         <h3 class="header-tree header-preferenses">Strategy</h3>
                         <p class="body preferenses-descr">
                             Our goal is to identify the business problem to walk away with the perfect and creative solution.
                         </p>
                     </li>
-                    <li class="preferences-item"> 
+                    <li class="preferences-item">
+                        <div class="preferences-icons">
+                            <svg width="64" height="64">
+                                <use href="./images/icons.svg#clock"></use>
+                            </svg>
+                        </div> 
                         <h3 class="header-tree header-preferenses">Punctuality</h3>
                         <p class="body preferenses-descr">
                             Bring the key message to the brand's audience for the best price within the shortest possible time.
                         </p>
                     </li>
                     <li class="preferences-item">
+                        <div class="preferences-icons">
+                            <svg width="64" height="64">
+                                <use href="./images/icons.svg#diagram"></use>
+                            </svg>
+                        </div>
                         <h3 class="header-tree header-preferenses">Diligence</h3>
                         <p class="body preferenses-descr">
                             Research and confirm brands that present the strongest digital growth opportunities and minimize risk.
                         </p>
                     </li>
                     <li class="preferences-item">
+                        <div class="preferences-icons">
+                            <svg width="64" height="64">
+                                <use href="./images/icons.svg#astronaut"></use>
+                            </svg>
+                        </div>
                         <h3 class="header-tree header-preferenses">Technologies</h3>
                         <p class="body preferenses-descr">
                             Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.
@@ -152,28 +170,28 @@
             <p class="ftr-media-descr">Social media</p>
             <ul class="ftr-icons-list list">
                 <li class="frt-icon">
-                    <a href="" aria-label="instagram" class="link-media" aria-label="instagram">
+                    <a href="" class="link-media" aria-label="Instagram">
                     <svg class="ftr-media" width="24" height="24">
                     <use href="./images/icons.svg#instagram"></use>
                     </svg>
                     </a>
                 </li>
                 <li class="frt-icon">
-                    <a href="" aria-label="twitter" class="link-media" aria-label="twitter">
+                    <a href="" class="link-media" aria-label="Twitter">
                     <svg class="ftr-media" width="24" height="24">
                     <use href="./images/icons.svg#twitter"></use>
                     </svg>
                     </a>            
                 </li>
                 <li class="frt-icon">
-                    <a href="" aria-label="facebook" class="link-media" aria-label="facebook">
+                    <a href="" class="link-media" aria-label="Facebook">
                     <svg class="ftr-media" width="24" height="24">
                     <use href="./images/icons.svg#facebook"></use>
                     </svg>
                     </a>                    
                 </li>
                 <li class="frt-icon">
-                    <a href="" aria-label="linkedin" class="link-media" aria-label="linkedin">
+                    <a href="" class="link-media" aria-label="Linkedin">
                     <svg class="ftr-media" width="24" height="24">
                     <use href="./images/icons.svg#linkedin"></use>
                     </svg>
@@ -183,5 +201,20 @@
         </div>
     </div>
     </footer>
+
+    <!-- Modal Window -->
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-btn" data-modal-close>
+                <svg class="modal-icon" width="8" height="8">
+                    <use href="./images/icons.svg#close"><use>
+                </svg>
+            </button>                  
+        </div>
+    </div>   
+
+    <script src="./js/modal.js"></script>
+
 </body>
 </html>
