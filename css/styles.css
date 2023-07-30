@@ -792,6 +792,9 @@ margin: 0;
     transition-duration: 250ms, 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
 
+    opacity: 1;
+    pointer-events: initial;
+    visibility: visible;
 }
 
 .backdrop.is-hidden {
