@@ -728,9 +728,9 @@ h1,h2,h3,h4,h5,h6 p {
     transform: translateY(100%); 
 } */
 
-.portfolio-card:hover .overlay {
+/* .portfolio-card:hover .overlay {
     transform: translateY(0); 
-}
+} */
 
 .portfolio-link {
     display: block;
@@ -758,6 +758,7 @@ line-height: 1.5em;
 letter-spacing: 0.02em;
 
 position: absolute;
+top: 0;
 padding: 40px 32px;
 margin: 0;
 background-color: var(--primary_brand);
