@@ -472,6 +472,9 @@ h1,h2,h3,h4,h5,h6 p {
     width: calc((100% - 120px) / 6);
     height: 88px;
     flex-shrink: 0;
+    transition-property: color, border-color;
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-section {
@@ -495,12 +498,14 @@ h1,h2,h3,h4,h5,h6 p {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-link:hover {
+.customers-link:hover,
+.customers-link:focus {
     border-color: var(--pressed-state);
 }
 
 .customers-link:hover .customers-icon{
     fill: var(--pressed-state);
+    color: var(--pressed-state)
 }
 
 .customers-header {
