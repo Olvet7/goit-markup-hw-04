@@ -499,7 +499,7 @@ h1,h2,h3,h4,h5,h6 p {
 
 .customers-link:hover,
 .customers-link:focus {
-    border-color: var(--pressed-state);
+    color: var(--pressed-state);
 }
 
 .customers-link:hover .customers-icon{
