@@ -60,16 +60,6 @@ body {
     align-items: center;
 }
 
-.current {
-    position: relative;
-    color: var(--pressed-state);
-
-    transition-property: color; 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
 .nav-link.current::after {
     content: '';
     position: absolute;
@@ -98,6 +88,15 @@ body {
     display: block;
     width: 100%;
     height: 4px;
+}
+ 
+.current {
+    position: relative;
+    color: var(--pressed-state);
+
+    transition-property: color; 
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset */
@@ -493,9 +492,9 @@ h1,h2,h3,h4,h5,h6 p {
     border: 1px solid var(--subtle-text);
 
     color: var(--subtle-text);
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border-color, color;
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
