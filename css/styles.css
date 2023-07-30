@@ -711,27 +711,6 @@ h1,h2,h3,h4,h5,h6 p {
     position: relative;
 }
 
-/* .overlay {
-    background-color: var(--primary_brand);
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 360px;
-    height: 300px;
-
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    transform: translateY(100%); 
-} */
-
-/* .portfolio-card:hover .overlay {
-    transform: translateY(0); 
-} */
-
 .portfolio-link {
     display: block;
     transition-property: box-shadow;
@@ -867,7 +846,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
     justify-content: center;
 
-    transition-property: background-color, border-color;
+    transition-property: background-color, border;
     transition-duration: 250ms, 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -875,6 +854,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .modal-btn:hover,
 .modal-btn:focus {
     background-color: var(--pressed-state);
-    border: none;
     fill: #ffffff;
+    border: none;
 }
