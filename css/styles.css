@@ -411,21 +411,17 @@ h1,h2,h3,h4,h5,h6 p {
 
 .customers-list {
     display: flex;
-    justify-content: center;
     gap: 24px;
-    padding-top: 72px;
 }
 
 .customers-item {
-    /* width: width: calc((100% - 120px) / 6); */
+    width: width: calc((100% - 120px) / 6);
     height: 88px;
     flex-shrink: 0;
 }
 
-.customers {
-    height: 440px;
+.customers-section {
     background-color: var(--white-background);
-
     padding: 120px 0 120px 0;
 }
 
@@ -461,6 +457,8 @@ h1,h2,h3,h4,h5,h6 p {
     line-height: 1.11em;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    
+    margin-bottom: 72px;
 }
 
 .customers-icon {
